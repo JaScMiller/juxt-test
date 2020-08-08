@@ -14,6 +14,8 @@ To run the unit tests associated with the project, type the following into the t
 
 ## Running the program
 
+(in-ns name) switches namespace
+
 TODO
 
 ### Bugs
