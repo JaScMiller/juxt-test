@@ -14,9 +14,13 @@ To run the unit tests associated with the project, type the following into the t
 
 ## Running the program
 
-(in-ns name) switches namespace
+To run the program, run the following command:
 
-TODO
+`lein run`
+
+You can also REPL into the project:
+
+`lein repl`
 
 ### Bugs
 
