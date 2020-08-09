@@ -9,6 +9,12 @@
 (defn get-summaries-from-dark-sky-response
     "Will parse the json response from dark sky and extract the current and hourly summary, and the daily precip probability"
     [json]
-    {:currentlySummary (get (get (get json :body) :currently) :summary)
-     :hourlySummary (get (get (get json :body) :hourly) :summary)
-     :precipProbability (get (get (get (get (get json :body) :daily) :data) 0) :precipProbability)})
+    {:currentlySummary (get (get json :currently) :summary)
+     :hourlySummary (get (get json :hourly) :summary)
+     :precipProbability (get (get (get (get json :daily) :data) 0) :precipProbability)})
+
+(defn get-sumaries-for-lat-lng
+    "Will call the API and get the summary for the given latitude and longitude"
+    [lat lng]
+    (let [response-body ((call-dark-sky-api lat lng) :body)]
+        (get-summaries-from-dark-sky-response response-body)))

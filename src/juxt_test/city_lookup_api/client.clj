@@ -2,7 +2,7 @@
     (:require [clj-http.client :as client]))
 
 (defn call-cities-api
-    "Will call the city API and return the results"
+    "Will call the city API and return the results, with the body being the list of cities"
     []
     (client/get "https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json" {:as :json}))
 
