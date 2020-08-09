@@ -16,7 +16,7 @@ To run the unit tests associated with the project, type the following into the t
 
 To run the program, run the following command:
 
-`lein run`
+`lein run {city name}`
 
 You can also REPL into the project:
 
