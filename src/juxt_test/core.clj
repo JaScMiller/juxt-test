@@ -11,5 +11,6 @@
       (if city-details
         (let [weather-data (get-sumaries-for-lat-lng (city-details :lat) (city-details :lng))]
           (let [weather-report (report-weather (get weather-data :currentlySummary) (get weather-data :hourlySummary) (get weather-data :precipProbability))]
-            (println weather-report)))
+            (println weather-report))
+            (println (report-hottest-day (weather-data :days))))
         (println (str "No results found" (if input-city (str " for " input-city) "") "."))))))

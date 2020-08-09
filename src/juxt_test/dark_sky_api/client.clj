@@ -11,7 +11,8 @@
     [json]
     {:currentlySummary (get (get json :currently) :summary)
      :hourlySummary (get (get json :hourly) :summary)
-     :precipProbability (get (get (get (get json :daily) :data) 0) :precipProbability)})
+     :precipProbability (get (get (get (get json :daily) :data) 0) :precipProbability)
+     :days (get (get json :daily) :data) })
 
 (defn get-sumaries-for-lat-lng
     "Will call the API and get the summary for the given latitude and longitude"

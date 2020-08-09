@@ -15,7 +15,8 @@
     (let [result (get-sumaries-for-lat-lng 40 -100)]
       (is (contains? result :currentlySummary)
       (is (contains? result :hourlySummary)
-      (is (contains? result :precipProbability)))))))
+      (is (contains? result :days)
+      (is (contains? result :precipProbability))))))))
     
     
 

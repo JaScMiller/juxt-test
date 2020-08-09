@@ -4,6 +4,7 @@
 
 * Decide what to do when there are multiple cities with the same name
 * City lookup should be case insensitive
+* Need more tests for the hottest day feature, ran out of time on technical test
 
 ## Less important
 
